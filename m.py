@@ -1,0 +1,37 @@
+from tkinter import *
+root=Tk()
+def add():
+    l=IntVar()
+    c=Entry(root,textvariable=l)
+    l.set(n.get()+m.get())
+    c.grid(row=4)
+def sub():
+    l=IntVar()
+    c=Entry(root,textvariable=l)
+    l.set(n.get()-m.get())
+    c.grid(row=4)
+def mul():
+    l=IntVar()
+    c=Entry(root,textvariable=l)
+    l.set(n.get()*m.get())
+    c.grid(row=4)
+def div():
+    l=IntVar()
+    c=Entry(root,textvariable=l)
+    l.set(n.get()/m.get())
+    c.grid(row=4)
+global n,m
+n=IntVar(); m=IntVar()
+a=Entry(root,textvariable=n)
+b=Entry(root,textvariable=m)
+n.set(""); m.set("")
+b1=Button(root,text="+",command=add)
+b2=Button(root,text="-",command=sub)
+b3=Button(root,text="*",command=mul)
+b4=Button(root,text="/",command=div)
+a.grid(row=0,column=0)
+b.grid(row=0,column=2)
+b1.grid(row=2,column=0)
+b2.grid(row=2,column=1)
+b3.grid(row=2,column=2)
+b4.grid(row=2,column=3)
